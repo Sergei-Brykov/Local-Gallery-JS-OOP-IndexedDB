@@ -1,0 +1,303 @@
+
+.wraper-add-display{
+  position: fixed;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: none;
+  overflow: auto;
+}
+.wraper-add-display h2{
+  text-align: center;
+}
+.picture{
+  width: 650px;
+  height: 650px;
+  border: 1px solid black;
+  overflow: auto;
+  background: white;
+}
+.wrap-display{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 660px;
+  margin-bottom: 10px;
+  transition-duration: .5s;
+  overflow: hidden;
+}
+.display-conteiner{
+  width: 400px;
+  margin: 0 10px;  
+}
+.add-display .heading,
+.display-conteiner .heading{
+  width: 100%;
+  height: 40px;
+  background:  #32405b;
+  box-sizing: border-box;
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  line-height: 38px;
+  font-weight: 600;
+  margin: 5px 0px;
+  cursor: pointer;
+  position: relative;
+}
+.triangle{
+  position: absolute;
+  top: -2px;
+  left: 10px;
+  width: 0;
+  border: 15px solid transparent; 
+  border-bottom: 12px solid azure;
+  transition-duration: .5s;
+}
+input[name="check-redactor"]:checked + label .triangle,
+input[name="discription"]:checked + label .triangle{
+  top: 13px;
+  transform: rotate(180deg);
+  border-bottom: 12px solid rgb(143, 251, 255)
+}
+.display-conteiner > div{
+  overflow: hidden;
+  height: 0px;
+  transition-duration: .5s;
+}
+input[name="discription"]:checked ~ div{
+  height: 342px;
+}
+input[name="check-redactor"]{
+  display: none;
+}
+input[name="check-redactor"]:checked ~ div.wrap-display{
+  height: 0;
+}
+.display-conteiner textarea{
+  margin: 10px 0;
+  resize: none;
+  padding: 10px;
+}
+input[type="file"]{
+  text-align: center;
+  margin: 10px auto;
+}
+.image-heading{
+  margin: 10px 0 0 0;
+}
+.image-display-item div,
+.image-display-item p{
+  display: inline-block;
+  font-size: 18px;
+  width: 160px;
+  margin-top: 12px;
+}
+.image-display-item div span,
+.image-display-item p span{
+  float: right;
+}
+.image-display-item p::before{
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: red;
+  border: 1px solid black;
+}
+.blue p::before{
+  background: blue;
+}
+.green p::before{
+  background: green;
+}
+.opacity p::before{
+  background: linear-gradient(45deg, black, rgba(0, 0, 0, 0));
+  border: black 1px solid;
+}
+.wraper-add-display input[name="discription"]{
+  display: none;
+}
+.image-display-item button{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 10px;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+.add-display{
+  position: absolute;
+  z-index: 5;
+  width: 1100px;
+  height: auto;
+  background: #d5e9f1;
+  top: 30px;
+  border-radius: 9px;
+  padding: 15px 10px;
+}
+.closed{
+  font-weight: 800;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 8px 0;
+  border-radius: 50%;
+  border: 2px solid black;
+  padding: 0 2px 2px 1px;
+  text-align: center;
+}
+.typeItems{
+  margin-top: 15px;
+  align-items: flex-start;
+}
+.typeItems div{
+  width: 60%;
+}
+.typeItems div:nth-child(2){
+  width: 50%;
+}
+.typeItems input[type="text"],
+.discr-item input[type="text"]{
+  font-size: 18px;
+  width: 180px;
+  margin: 10px 0;
+  padding: 5px 8px;
+}
+div.input-wrap{
+  width: 50%;
+  float: left;
+}
+.image-display-item input[type='range']{
+  float: right;
+  margin-top: 17px;
+  width: 220px;
+}
+.discr-item input[type="text"]{
+  width: 160px;
+  padding: 5px 8px 5px 25px
+}
+.discr-item .decoration-input{
+  position: absolute;
+  font-size: 25px;
+  top: 44px;
+  left: 6px;
+}
+.width div,
+.height div{
+  width: 160px;
+}
+.width div input,
+.height div input{
+  width: 50px;
+  float: right;
+}
+#size-check{
+  width: 18px;
+  height: 18px;
+  margin-top: 5px;
+}
+#input1:checked ~ div.wraper-add-display{
+  display: flex;
+}
+div.discr-item{
+  height: 50%;
+  align-items: flex-start;
+  position: relative;
+}
+.discr-item > div{
+  width: 50%;
+}
+#discr-albom-result{
+  color: #32405b;
+  font-weight: 800;
+  font-size: 20px;
+}
+.wrap-discr{
+  position: relative;
+}
+#new_albom_redactor{
+  position: absolute;
+  bottom: -60px;
+  left: 50px;
+  padding: 5px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #32405b;
+}
+.discr-head {
+  width: calc(100% - 2px);
+  height: 30px;
+  background: #5770a1;
+  box-sizing: border-box;
+  color: white;
+  padding: 3px 10px;
+  margin-bottom: 4px;
+}
+.r-side-discr{
+  width: 50%;
+}
+#redactor_alboms,
+#redactor_tags{
+  overflow: auto;
+  height: 140px;
+}
+#redactor_alboms div{
+  box-sizing: border-box;
+  padding: 3px 8px;
+  font-size: 18px;
+  color:#32405b;
+  font-weight: 600;
+  width: calc(100% - 2px);
+  cursor: pointer;
+  font-weight: 700;
+}
+#redactor_alboms div:hover{
+  background:#32405b;
+  color: white;
+}
+#redactor_tags span,
+#redactor_tags_result span{
+  background:#32405b;
+  color: white;
+  padding: 0px 9px;
+  border-radius: 10px;
+  line-height: 28px;
+  cursor: pointer;
+  font-weight: 600;
+}
+#redactor_tags span:hover,
+#redactor_tags_result span:hover{
+  background:brown;
+}
+aside #main_alboms .checked-albom{
+  background: #32405b;
+  color: white;
+}
+#save-change,
+#change-and-save,
+#save-all-img{
+  float: right;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 5px 10px 8px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: outset 1px grey;
+  margin: 70px 0 0 0 ;
+  color: white;
+  background:  #32405b;
+}
+#save-to-gallery:hover {
+  color:  #32405b;
+  background: cornsilk;
+}
+#save-all-img{
+  margin-right: 40px;
+}

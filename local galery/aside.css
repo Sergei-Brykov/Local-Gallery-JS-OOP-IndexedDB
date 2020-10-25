@@ -1,0 +1,79 @@
+aside{
+  width: 250px;
+  background: #d5e9f1;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+}
+aside .aside-item{
+  height: 500px;
+}
+aside .aside-item .heading{
+  background:  #32405b;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  color:white;
+  box-sizing: border-box;
+  padding-left: 10px;
+} 
+
+aside .heading button{
+  background: #32405b;
+  margin: 5px 10px;
+  float: right;
+  padding: 0px 3px;
+  border-radius:5px;
+  cursor: pointer;
+  color:  white;
+  font-weight: 700;
+
+}
+aside .heading button:hover{
+  background: white;
+  color: #32405b;
+}
+aside .conteiner{
+  width: 100%;
+  height: 500px;
+  overflow: auto;
+  line-height: 30px;
+}
+aside #main_alboms div{
+  font-weight: 800;
+  color: #32405b;
+  border-bottom: 1px solid  #32405b;
+  box-sizing: border-box;
+  padding: 5px;
+  cursor: pointer;
+}
+aside #main_alboms div:hover{
+  color: white;
+  background: #32405b;
+}
+aside #main_alboms div:nth-child(1):hover{
+  border-top: 1px solid white;
+  border-bottom: none
+}
+aside #main_alboms span{
+  float: right;
+  margin-right: 5px;
+}
+aside #main_tags span{
+  font-size: 14px;
+  font-weight: 400;
+  background:  #32405b;
+  color: aliceblue;
+  border: 1px solid #dadce0;
+  padding: 0 9px 2px 9px;
+  border-radius: 32px;
+  cursor: pointer;
+  height: 24px;
+  line-height: 24px;
+  margin: 0 4px 4px 0
+}
+aside #main_tags span:hover{
+  background:  brown;
+  font-weight: 800;
+}

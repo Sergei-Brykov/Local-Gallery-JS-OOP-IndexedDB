@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local gallery</title>
+  <link rel="stylesheet" href="./local galery/header.css">
+  <link rel="stylesheet" href="./local galery/redactor.css">
+  <link rel="stylesheet" href="./local galery/aside.css">
+  <link rel="stylesheet" href="./local galery/main.css">
+</head>
+<body>
+  <input type="radio" name="display-rules" id="input1">
+  <input type="radio" name="display-rules" id="input2">
+  <div class="wraper-add-display">
+    <div class="add-display">
+      <label for="input2">
+        <div class="closed">X</div>
+      </label>
+      <h2>Click on the photo to open it in the redactor</h2>
+      <div class="flex">
+        <input id='input-file' type="file" accept='image/*' multiple>
+      </div>
+      <input type="checkbox" name="check-redactor" id="redactor-check" checked>
+      <label for="redactor-check">
+        <div class="heading">
+          Redactor
+          <div class="triangle"></div>
+        </div>
+      </label>
+      <div class="wrap-display">
+        <div id="picture" class="picture"></div>
+        <div>
+          <div class="display-conteiner ">
+            <input type="radio" name="discription" id="image-display" checked>
+            <label for="image-display">
+              <div class="heading">
+                Color Display
+                <div class="triangle"></div>
+              </div>
+            </label>
+            <div>
+              <h4 class="image-heading">
+                Color Display:
+              </h4>
+              <div class="image-display-item red">
+                <p>
+                  Red Filter
+                  <span id="red-span">0</span>
+                </p>
+                <input id="red-range" type="range" name="" min="-100" max="100" value="0">
+              </div>
+              <div class="image-display-item green">
+                <p>
+                  Green Filter
+                  <span id="green-span">0</span>
+                </p>
+                <input id="green-range" type="range" name="" min="-100" max="100" value="0">
+              </div>
+              <div class="image-display-item blue">
+                <p>
+                  Blue Filter
+                  <span id="blue-span">0</span>
+                </p>
+                <input id="blue-range" type="range" name="" min="-100" max="100" value="0">
+              </div>
+              <div class="image-display-item opacity">
+                <p>
+                  Opacity
+                  <span id="opacity-span">1</span>
+                </p>
+                <input id="opacity-range" type="range" name="" min="0" max="255" value="255">
+              </div>
+              <h4 class="image-heading">
+                Size Display:
+              </h4>
+              <div class="image-display-item size">
+                <div>
+                  &#10066; Image Size
+                  <label for="size-check">
+                    <span>&#128274;
+                      <input type="checkbox" name="" id="size-check" checked>
+                    </span>
+                  </label>
+                </div>
+                <input id="size-range" type="range" name="" min="0" max="200" value="100">
+              </div>
+              <div class="image-display-item width">
+                <div>
+                  &lArr;&rArr;Width
+                  <input type="number" name="" id="size-width" disabled>
+                </div>
+              </div>
+              <div class="image-display-item height">
+                <div>
+                  &#8657; &#8659; Height
+                  <input type="number" name="" id="size-height" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="display-conteiner ">
+            <input type="radio" name="discription" id="tag-disciption">
+            <label for="tag-disciption">
+              <div class="heading">
+                Add Albom
+                <div class="triangle"></div>
+              </div>
+            </label>
+            <div>
+              <div class="flex discr-item">
+                <div class="wrap-discr">
+                  <div class="discr-head">
+                    <h4>Albom:</h4>
+                  </div>
+                  <div id="discr-albom-result"></div>
+                  <button id="new_albom_redactor">
+                    NEW ALBOM
+                  </button>
+                </div>
+                <div class="r-side-discr">
+                  <div class="discr-head">
+                    <h4>All Alboms:</h4>
+                  </div>
+                  <div id="redactor_alboms"></div>
+                </div>
+              </div>
+              <div class="flex discr-item">
+                <div>
+                  <div class="discr-head">
+                    <h4>Tags:</h4>
+                  </div>
+                  <div class="decoration-input">#</div>
+                  <input id='tags-creater' type="text" name="" id="">
+                  <div id="redactor_tags_result"></div>
+                </div>
+                <div class="r-side-discr">
+                  <div class="discr-head">
+                    <h4>Tags:</h4>
+                  </div>
+                  <div id="redactor_tags">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="display-conteiner">
+            <input type="radio" name="discription" id="main-disciption">
+            <label for="main-disciption">
+              <div class="heading">
+                Disciption
+                <div class="triangle"></div>
+              </div>
+            </label>
+            <div>
+              <div class="typeItems  flex">
+                <div>
+                  <h4>Name of photo:</h4>
+                  <input id="file-name" type="text">
+                </div>
+                <div id="formats">
+                  <h4>Type of photo:</h4>
+                  <div class="input-wrap">
+                    <input id="album" type="radio" name="format">
+                    <label for="album">Album </label>
+                    <br>
+                    <input id="portrait" type="radio" name="format">
+                    <label for="portrait">Portrait</label>
+                  </div>
+                  <div class="input-wrap">
+                    <input id="square" type="radio" name="format">
+                    <label for="square">Square</label>
+                    <br>
+                    <input id="other" type="radio" name="format">
+                    <label for="other">Other</label>
+                  </div>
+                </div>
+              </div>
+              <h4>Disciption of Photo:</h4>
+              <textarea name="" id="disciption" cols="57" rows="10" placeholder="Add Disciption"></textarea>
+            </div>
+            <button id="save-change">Save Changes</button>
+            <button class="display-none" id="change-and-save">Change-and-save</button>
+          </div>
+        </div>
+      </div>
+      <div class="imgs-conteiner">
+        <div id="addet-img"></div>
+      </div>
+      <br clear="both">
+      <button id="save-all-img">Add Images</button>
+    </div>
+  </div>
+  <header class="flex">
+    <a href="https://devit-team.com/">
+      <img src="https://devit-team.com/app/uploads/2019/01/logo.svg" alt="Лого" width="50px" height="50px">
+    </a>
+    <a href="./local Galery.html">
+      <h1 title="Home">Local Gallery</h1>
+    </a>
+    <input id="searh" type="search" name="" id="" placeholder="Search by name">
+    <label for="input1">
+      <div id='add-img'>
+        Add A Photo
+      </div>
+    </label>
+    <div id="infoDB" class="progres flex">
+      <h3>GALLERY <br> <i id="size-lenght"></i> IMAGES</h3>
+      <div class="progres">
+        Used: <span id="size-used"></span>
+        <br>
+        Total: <span id="size-total"></span>
+        <div class="progres progres-bar">
+          <span id="percent">50 %</span>
+          <div class="progres progres-item"></div>
+        </div>
+      </div>
+    </div>
+    <div id="clear">
+      Clear
+    </div>
+  </header>
+  <div class="main-conteiner flex">
+    <aside>
+      <div class="aside-item">
+        <div class="heading">
+          Alboms
+          <button id="new_albom">
+            New Albom
+          </button>
+        </div>
+        <div id="main_alboms" class="conteiner">
+        </div>
+      </div>
+      <div class="aside-item">
+        <div class="heading">
+          Tags
+        </div>
+        <div id="main_tags" class="conteiner">
+        </div>
+      </div>
+    </aside>
+    <main id="galery">
+      <div class="img-display flex">
+        <div id="img-display"></div>
+        <div class="main-discription">
+          <div class="discription-conteiner">
+            <div class="discription-item flex">
+              <div class="discrip-naming">Name:</div>
+              <div id="dsc-name"></div>
+              <div class="discrip-naming">Albom:</div>
+              <div id="dsc-albom"></div>
+            </div>
+            <div class="discription-item flex">
+              <div class="discrip-naming">Descrip:</div>
+              <div id="dsc-discrip" class="main-discrip">
+              </div>
+            </div>
+            <div class="discription-item flex">
+              <div class="discrip-naming">Type:</div>
+              <div id="dsc-type"></div>
+              <div class="discrip-naming">Size:</div>
+              <div id="dsc-size"></div>
+            </div>
+            <div class="discription-item flex">
+              <div class="discrip-naming">Width:</div>
+              <div id="dsc-width"></div>
+              <div class="discrip-naming">Height:</div>
+              <div id="dsc-height"></div>
+            </div>
+            <div class="discription-item flex">
+              <div class="discrip-naming">Tags:</div>
+              <div id="dsc-tags" class="main-discrip"></div>
+            </div>
+            <div class="discription-item flex">
+              <div class="discrip-naming">Modified:</div>
+              <div id="dsc-modified" class="main-discrip"></div>
+            </div>
+          </div>
+          <div>
+            <a id="download-img" href="#">
+              <button>DOWNLOAD</button>
+            </a>
+            <button id="main-change">REDACTOR</button>
+            <button id="main-delete">DELETE</button>
+          </div>
+        </div>
+      </div>
+      <div class="img-conteiner display-none">
+        <div class="img-header">
+          All images
+        </div>
+        <div id="main-allimg"></div>
+        <br clear="both">
+      </div>
+      <div class="img-conteiner display-none">
+        <div class="img-header">
+          Albom:
+        </div>
+        <div id="main-albom">
+        </div>
+        <br clear="both">
+        <img src="local galery/arrow.png" alt="download" width="38px" class="img-download img-add">
+        <button id="add_img_to_albom">ADD IMAGE</button>
+        <a id="download-alboms">
+          <img src="local galery/download.png" alt="download" width="38px" class="img-download">
+          <button>
+            DOWNLOAD
+          </button>
+        </a>
+        <img src="local galery/delete.png" alt="download" width="35px" class="img-download img-delete">
+        <button id="delete-albom">DELETE ALBOM</button>
+        <img src="local galery/delete2.png" alt="download" width="35px" class="img-download img-delete2">
+        <button id="delete-albandimg">DELETE ALMOM & IMG</button>
+      </div>
+      <div class="img-conteiner display-none">
+        <div class="img-header">
+          Without album
+        </div>
+        <button id="add_img_to_albom_walbom" class="display-none">ADD IMAGE</button>
+        <div id="main-without-album">
+        </div>
+        <br clear="both">
+      </div>
+      <div class="img-conteiner display-none">
+        <div class="img-header">
+          Search results
+        </div>
+        <div id="main-search-results">
+        </div>
+        <br clear="both">
+      </div>
+    </main>
+  </div>
+  <!-- JS ZIP  -->
+  <script src="./zip/dist/jszip.js"></script>
+  <!--  Обертка промисов-->
+  <script src="https://cdn.jsdelivr.net/npm/idb@3.0.2/build/idb.min.js"></script>
+  <!-- Отрисовывает картинку в редакторе - меняет цвет/размер -->
+  <script src="./local galery/Painter.js"></script>
+  <!-- Поведение настроек цвета/размера -->
+  <script src="./local galery/ImageControls.js"></script>
+  <!-- Устанавливает и отрисовывает в редакторе обьект из хранилище - 
+    отдает готовые измененные обьекты -->
+  <script src="./local galery/Redactor.js"></script>
+  <!-- рисует галерею, также в случае поиска рисует альбомы теги и поиск по имени -->
+  <script src="./local galery/Galery.js"></script>
+  <!-- отрисовыввает альбомы в сайд баре и редакторе - отвечает за их поведение в редакторе -->
+  <script src="./local galery/AlbomsPainer.js"></script>
+  <!-- отрисовыввает теги в сайд баре и редакторе - отвечает за их поведение в редакторе -->
+  <script src="./local galery/TagsPainer.js"></script>
+  <!-- загружает картинки в меню загрузки отрисовывает предварительный просмотр -->
+  <script src="./local galery/Loader.js"></script>
+  <!-- работает с IndexedDB - раздает/получает обьекты/массивы_обьектов  -->
+  <!-- не сильно разобрался с запросами( в некоторых методах дублирую код( -->
+  <script src="./local galery/LocalGalery.js"></script>
+</body>
+
+</html>

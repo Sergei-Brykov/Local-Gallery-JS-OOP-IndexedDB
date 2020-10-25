@@ -1,0 +1,183 @@
+main{
+  width: 1140px;
+  margin: 10px 0;
+}
+main .img-display{
+  width: 100%;
+  height: 420px;
+  background: #d5e9f1;
+  box-sizing: border-box;
+  padding: 10px;
+  align-items: flex-start;
+  position: relative;
+}
+main .img-display #img-display{
+  width: 600px;
+  height: 400px;
+  background:white;
+  box-sizing: border-box;
+  border: 1px solid steelblue;
+}
+main .main-discription{
+  width: 506px;
+  height: 400px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+main .discription-item{
+  background: white;
+  width: 100%;
+  border-bottom: 1px solid steelblue;
+  height: auto;
+  align-items: stretch;
+}
+main .discription-item:first-child{
+  border-top: 1px solid steelblue;
+}
+main .discription-item .discrip-naming{
+  font-size: 20px;
+  text-align: right;
+  font-weight: 600;
+  width: 120px;
+  height: inherit;
+  box-sizing: border-box;
+  padding-right: 15px;
+  border-right: 2px solid steelblue;
+  border-left: 2px solid steelblue;
+}
+main .discription-item div{
+  width: 133px;
+  height: auto;
+  box-sizing: border-box;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+main .discription-item div.main-discrip{
+  width: 386px;
+}
+main .discription-item div:last-child{
+  border-right: 2px solid steelblue;
+}
+main .discription-conteiner{
+  width: 100%;
+  height: 320px;
+  overflow: auto;
+}
+main button{
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  margin: 40px 20px 10px 20px;
+  padding: 5px;
+  border-radius: 18px;
+  background: #32405b;
+  color: white;
+  font-weight: 600;
+}
+main .img-conteiner{
+  background: #d5e9f1;
+  width: 1140px;
+  margin: 10px 0;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+}
+main .img-header{
+  background: #32405b;
+  height: 30px;
+  color: white;
+  font-weight: 600;
+  padding: 5px 0 0 15px;
+  margin-bottom: 10px;
+}
+main #delete-albandimg{
+  width: 200px;
+}
+.imgs-conteiner div div img,
+main .img-conteiner div div:not(.img-header) img{
+  height: 200px;
+  cursor: pointer;
+}
+.imgs-conteiner div div,
+.img-conteiner div div:not(.img-header){
+  float: left;
+  text-align: center;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 275px;
+  background: radial-gradient(at top, #FEFFFF, #A7CECC);
+  position: relative;
+}
+.imgs-conteiner div div{
+  width: 270px;
+}
+main #img-display{
+  overflow: auto;
+}
+.display-none{
+  display: none;
+}
+.filter img{
+  filter: grayscale(85%);
+  opacity: .5;
+}
+.filter img.filter{
+  filter: grayscale(20%);
+  opacity: 1;
+}
+#add_img_to_albom_walbom{
+  border-radius: 20px 20px 5px 5px ;
+}
+.img-download{
+  position: absolute;
+  bottom: 53px;
+  left: 236px;
+}
+.img-delete{
+  left: 400px;
+}
+.img-delete2{
+  left: 603px;
+}
+.img-add{
+  height: 30px;
+  left: 70px;
+}
+.disable{
+  color: black;
+  background: grey;
+}
+.img-conteiner div div:not(.img-header) input {
+  position: absolute;
+  z-index: 3;
+  top: 90px;
+  width: 30px;
+  height: 30px;
+  left: 125px;
+}
+.img-display #arrow{
+  width: 60px;
+  position: absolute;
+  top: -23px;
+  left: 346px;
+  transform: rotate(210deg);
+  animation: anima 1s infinite;
+  opacity: 1;
+}
+@keyframes anima {
+  from {
+    top: -23px;
+    left: 346px;
+    opacity: 1;
+  }
+  50% {
+    top: -13px;
+    left: 336px;
+    opacity: .5;
+  }
+  100% {
+    top: -23px;
+    left: 346px;
+    opacity: 1
+  }
+}
